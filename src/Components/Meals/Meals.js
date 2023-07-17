@@ -4,10 +4,12 @@ import MealsSummary from "./MealsSummary";
 
 
 const Meals = () => {
-    return <Fragment>
-        <MealsSummary />
-        <AvailbleMeals />
+  return (
+    <Fragment>
+      <MealsSummary />
+      <AvailbleMeals />
     </Fragment>
+  );
 };
 
 export default Meals;
