@@ -3,10 +3,10 @@ import Modal from '../UI/Modal';
 
 const Cart = (props) => {
 
-    const cartItems = [{id:'m1',name:'Sushi' ,amount:'2' ,price:'30'}].map(item => <li>{item.name}</li>)
+    const cartItems = [{id:'m1',name:'Sushi' ,amount:'2' ,price:'30'}].map(item => <li key={item.id}>{item.name}</li>)
 
     return (
-        <Modal>
+        <Modal onClick={props.onClick}>
             <ul className={classes['cart-items']}>
             {cartItems}
             </ul>
