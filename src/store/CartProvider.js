@@ -42,6 +42,10 @@ const cartReducer = (state, action) => {
     };
     updatedItems = state.items;
     updatedItems[existedCartItemIndex] = updatedItem;
+    if(updatedItem.amount === 0){
+      updatedItems.splice(existedCartItemIndex,1);
+    };
+    
     return { items: updatedItems, totalAmount: updatedTotalAmount };
   }
 
